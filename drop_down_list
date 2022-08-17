@@ -1,0 +1,45 @@
+import 'package:flutter/material.dart';
+
+class Test extends StatefulWidget {
+
+  @override
+  _TestState createState() => _TestState();
+
+  }
+
+
+class _TestState extends State<Test> {
+    var selectedCountry ;
+@override
+Widget build(BuildContext context) {
+
+  return Scaffold(
+        appBar: AppBar(),
+        drawer: Drawer(),
+        body: Center(
+          child: DropdownButton(
+            dropdownColor: Colors.black26,//list colors
+            //icon: Icons(Icons.add_business),
+
+            hint: Text("Choose Country ",style: TextStyle(color: Colors.black26),),
+            items: [
+              "USA",
+              "UAE",
+              "Palestine",
+              "Jordan",
+              "Germany",
+            ].map((e) => DropdownMenuItem(child: Text("$e"),value: e,)).toList(),
+            onChanged: (var1) {
+              //print("on change");
+              //print("$var1");//print on console the chosen variable from the list
+              setState(() {
+
+                selectedCountry =var1;
+
+              });
+            },
+            value: selectedCountry,
+          ),
+        ),);
+  }
+}

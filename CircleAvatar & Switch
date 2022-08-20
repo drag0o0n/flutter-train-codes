@@ -1,0 +1,59 @@
+import 'package:flutter/material.dart';
+
+class Test extends StatefulWidget {
+  @override
+  _TestState createState() => _TestState();
+}
+
+class _TestState extends State<Test> {
+  bool notify = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(),
+        drawer: Drawer(),
+        body: Center(
+          child: CircleAvatar(
+            //backgroundColor: Colors.cyan,
+            backgroundImage: AssetImage("images/1.png"),//make an image as background for the circle 
+            radius: 50,
+
+            child: Text("text ",style: TextStyle(fontSize: 30, color: Colors.black),),
+          ),
+        )
+        /*
+        Container(
+          child: ListTile(
+            title: Text("Nord"),
+            tileColor: Colors.red,
+            subtitle: Text("Oneplus"),
+            leading: Icon(Icons.mobile_friendly_sharp),
+            trailing: Text("Price 200\$"),
+            onTap: (){
+              print("ONtap");
+            },
+            onLongPress: (){
+              print("Longpress");
+            },
+          ),
+        )*/
+        /*Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+              Text("Notification turn on"),
+                Switch(activeColor:Colors.red
+                    ,activeTrackColor:Colors.cyan,
+                    inactiveTrackColor: Colors.black,
+                    inactiveThumbColor: Colors.green,
+                    value: notify, onChanged: (val){
+                  setState(() {
+                    notify =val;
+                    print(notify);
+                  });
+                })
+            ],))*/
+
+        );
+  }
+}

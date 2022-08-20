@@ -1,3 +1,6 @@
+//-----------------------------------------------------------------------------
+// test.dart
+//---------------------------------------------------------------
 import 'package:flutter/material.dart';
 
 class Test extends StatefulWidget {
@@ -57,3 +60,73 @@ class _TestState extends State<Test> {
         );
   }
 }
+
+
+// --------------------------------------------------------------------------------------------------------------------------
+// main.dart
+//-------------------------------------------
+import 'package:flutter/material.dart';
+import 'package:gesture_detector_dro_down/Test.dart';
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Test(),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(),
+      drawer: Drawer(),
+      body: Text("homepagw"),
+    );
+  }
+}
+/*
+class Login extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(),
+        drawer: Drawer(),
+        floatingActionButton: FloatingActionButton(onPressed: (){
+
+        },
+          child: Icon(Icons.accessibility),),//keepshowing in the same position,
+        //if you scroll the page this button keeps in tha same place
+        body:Center(
+          child:
+
+        GestureDetector(child: Container(
+          color:Colors.red,
+          padding: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+          child: Text("Add")),
+
+          onTapUp: (parameeter){
+          print("UP");
+
+        },
+          onTapDown: (down){
+          print("down");
+          },
+          onTapCancel: (){
+          print("Cancel");
+
+          },
+          onLongPress: (){
+          print("Long");
+          },
+        ),),
+
+
+    );
+  }
+}*/
